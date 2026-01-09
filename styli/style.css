@@ -1,0 +1,993 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* outline: 1px solid red; */
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    overflow-x: hidden;
+    position: relative;
+    max-width: 100%;
+}
+
+a {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+}
+
+.center {
+    max-width: 100%;
+    width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.menu {
+    width: 100%;
+    background: #EDECF6;
+    margin-bottom: 100px;
+    padding: 10px 0;
+}
+
+.menu .lista-phone {
+    display: none;
+}
+
+.menu .active {
+    max-width: 100%;
+    width: 300px;
+    right: 30px;
+    top: 70px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 40px;
+    position: absolute;
+    background-color: rgb(228, 208, 255);
+    list-style-type: none;
+}
+
+.menu .active li a {
+    color: #373650;
+    font-size: 20px;
+}
+
+.menu .center {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lewo {
+    max-width: 100%;
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lewo img {
+    width: 67px;
+}
+
+.lewo .lista {
+    list-style-type: none;
+    max-width: 100%;
+    width: 75%;
+    gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lista a {
+    padding: 20px 10px;
+    color: #51507660;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.lista a:hover {
+    background-color: #5150761A;
+    color: #515076;
+}
+
+.prawo {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.prawo .bar {
+    display: none;
+    font-size: 25px;
+    margin-top: 10px;
+    color: #4C5072;
+}
+
+.prawo .kosz {
+    cursor: pointer;
+    width: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    padding: 17px 15px;
+    border-radius: 50%;
+}
+
+.prawo .kosz p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    color: #FFFFFF;
+    border-radius: 50%;
+    background: #757AA5;
+    padding: 2px 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.prawo .sieci_spolecznosciowe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.prawo .sieci_spolecznosciowe a {
+    color: #515076c0;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.prawo .sieci_spolecznosciowe a:hover {
+    text-decoration: underline;
+}
+
+.czapka {
+    max-width: 100%;
+    margin-bottom: 400px;
+    width: 100%;
+}
+
+.czapka .nazwa {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 130px;
+    color: #515076;
+    margin-bottom: 60px;
+}
+
+.czapka .teksty {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.czapka .teksty .kilka h4 {
+    width: 50%;
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 133%;
+    color: #63678C;
+}
+
+.czapka .teksty .kilka p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 170%;
+    color: #888794;
+}
+
+.czapka .teksty .kilka {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.czapka .teksty .pierwszy {
+    gap: 600px;
+}
+
+.czapka .teksty .drugi {
+    margin-top: 100px;
+    height: 550px;
+}
+
+.produkty {
+    width: 100%;
+    position: relative;
+}
+
+
+/* obrazy */
+
+.czapka .lisc,
+.czapka .kwiatek,
+.czapka .jagody {
+    max-width: 100%;
+    height: auto;
+}
+
+.czapka .lisc {
+    z-index: -1;
+    width: 50%;
+    position: absolute;
+    left: -100px;
+    top: 500px;
+}
+
+.czapka .kwiatek {
+    z-index: -1;
+    width: 75%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.produkty .liscie {
+    z-index: -1;
+    width: 85%;
+    position: absolute;
+    width: 60%;
+    top: -35%;
+    left: -20%;
+}
+
+.czapka .jagody {
+    z-index: -2;
+    width: 83%;
+    position: absolute;
+    top: 750px;
+    right: 0;
+}
+
+.akcje .galaz {
+    z-index: -1;
+    position: absolute;
+    max-width: 100%;
+    width: 60%;
+    left: -5%;
+}
+
+.fakty .tlo {
+    z-index: 1;
+    position: absolute;
+    max-width: 100%;
+    right: 15px;
+    top: 100px;
+    max-width: 100%;
+    width: 35%;
+}
+
+
+/*  */
+
+.czapka .teksty .drugi button {
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #515076;
+    border: none;
+    color: #FFFFFF;
+    padding: 17px 5px;
+    margin: 20px 50px;
+}
+
+.czapka .teksty .drugi button:hover {
+    text-decoration: underline;
+    background-color: #34334b;
+}
+
+.czapka .teksty .trzeci {
+    justify-content: end;
+    gap: 100px;
+    margin-bottom: 100px;
+}
+
+.czapka .teksty .trzeci .gwiazdka {
+    max-width: 100%;
+    width: 90%;
+}
+
+.czapka .teksty .trzeci .gwiazdka p {
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 30px;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: right;
+}
+
+.czapka .teksty .trzeci .gwiazdka p:first-child {
+    font-size: 30px;
+}
+
+.czapka .teksty .trzeci h4 {
+    font-weight: 300;
+    font-size: 30px;
+    width: 80%;
+    line-height: 35px;
+}
+
+.produkty {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
+.produkty .napis {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 200;
+    font-size: 50px;
+    text-align: center;
+    color: #3e4057;
+    margin-bottom: 50px;
+}
+
+.produkty .karty {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.produkty .karty .karta {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 20px;
+    max-width: 100%;
+    width: 380px;
+    height: 550px;
+    background: #F7F7FA;
+    gap: 18px;
+    position: relative;
+}
+
+.produkty .karty .karta:nth-child(2) {
+    height: 600px;
+    width: 400px;
+}
+
+.produkty .karty .karta:hover {
+    background-color: #d8d8eb;
+}
+
+.produkty .karty .karta p {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    font-size: 15px;
+    color: #A5A3B9;
+    margin-bottom: 10px;
+}
+
+.produkty .karty .karta img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.produkty .karty .karta h2 {
+    color: #515076;
+    font-weight: 400;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.produkty .karty .karta .szczegoly {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.produkty .karty .karta .szczegoly .cena {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #515076;
+}
+
+.produkty .karty .karta .szczegoly .cena p {
+    font-weight: 500;
+    font-size: 18px;
+    color: #515076;
+    margin-top: 10px;
+}
+
+.produkty .karty .karta .szczegoly .cena i {
+    font-size: 16px;
+}
+
+.produkty .karty .karta .szczegoly .cena .p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.produkty .karty .karta .szczegoly .cena .p p:first-child {
+    text-decoration: line-through;
+    font-size: 14px;
+    color: #757AA5;
+}
+
+.produkty .karty .karta .promocja {
+    color: #51507680;
+    border-radius: 50%;
+    padding: 10px 13px;
+    border: #51507680 1px solid;
+    font-size: 30px;
+    position: absolute;
+    top: 6%;
+    left: 10%;
+}
+
+.akcje {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    position: relative;
+    margin-bottom: 400px;
+    gap: 45px;
+}
+
+.akcje h2 {
+    font-weight: 275;
+    color: #3e4057;
+    font-size: 70px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.akcje .o_tym {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 50px;
+    color: #888794;
+    max-width: 100%;
+    width: 300px;
+}
+
+.akcje .o_tym p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 35px;
+    letter-spacing: 0%;
+}
+
+.akcje .karta {
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F7F7FA;
+    padding: 30px 20px 30px 40px;
+    margin-left: 50px;
+    width: 600px;
+}
+
+.akcje .karta .opis {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.akcje .karta .opis .numer {
+    font-weight: 400;
+    font-size: 14px;
+    padding: 14px 25px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EDECF6;
+    border-radius: 50%;
+    color: #515076;
+}
+
+.akcje .karta .opis h4 {
+    font-weight: 300;
+    font-size: 24px;
+    color: #4C5072;
+}
+
+.akcje .karta .opis p {
+    color: #888794;
+    width: 215px;
+}
+
+.akcje .karta img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.akcje .podkarta p {
+    transform: rotate(-90deg);
+    position: absolute;
+    left: -50px;
+    bottom: 100px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.akcje .podkarta {
+    z-index: -1;
+    right: 33px;
+    top: 25px;
+    background-color: #515076;
+    position: absolute;
+    color: white;
+    height: 100%;
+    width: 600px;
+    max-width: 100%;
+}
+
+.fakty {
+    position: relative;
+    background-color: #EDECF6;
+    padding: 110px 0 20px 0;
+    margin-bottom: 130px;
+}
+
+.fakty .nazwa {
+    position: absolute;
+    color: #D6D4E7;
+    font-weight: 400;
+    font-size: 170px;
+    top: -15%;
+    z-index: 2;
+}
+
+.fakty .szczegoly {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fakty .szczegoly img {
+    max-width: 100%;
+    z-index: 2;
+    width: 800px;
+    margin-left: -200px;
+}
+
+.fakty .szczegoly .tekst {
+    z-index: 2;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.fakty .szczegoly .tekst .p {
+    max-width: 100%;
+    width: 300px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    font-size: 14px;
+    color: #A5A3B9;
+    line-height: 22px;
+}
+
+.fakty .szczegoly .tekst .cyfra {
+    font-weight: 300;
+    font-size: 120px;
+    color: #373650;
+}
+
+.fakty .szczegoly .tekst .kto {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 200;
+    font-size: 60px;
+    color: #373650;
+    margin-top: -20px;
+    margin-bottom: 40px;
+    margin-left: 7px;
+}
+
+.fakty .szczegoly .tekst .o_tym {
+    font-weight: 500;
+    font-size: 16px;
+    color: #888794;
+    line-height: 30px;
+}
+
+.warto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.warto h5 {
+    font-weight: 200;
+    font-size: 70px;
+    color: #4e516e;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 50px;
+}
+
+.warto .co {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.warto .co .dwa {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.warto .co .karta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 5px solid #515076;
+    max-width: 100%;
+    width: 300px;
+    height: 406px;
+    background: #F7F7FA;
+    padding: 30px 40px;
+}
+
+.warto .co .karta:first-child {
+    margin-top: 100px;
+}
+
+.warto .co .karta .tekst {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.warto .co .karta .tekst .p {
+    font-family: 'Courier New', Courier, monospace;
+    color: #A5A3B9;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.warto .co .karta .tekst h3 {
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.warto .co .karta .tekst .o_tym {
+    color: #888794;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.warto .co .karta .czytac {
+    color: #515076;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.warto .co .karta .czytac:hover {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.koniec {
+    padding: 580px 0;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(0, 0, 0, 0)), url("../obrazy/vincent-guth-NUiQpGnj9rI-unsplash.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+}
+
+.koniec .kontakty {
+    max-width: 100%;
+    width: 500px;
+    background-color: #F7F7FA;
+    padding: 50px 60px;
+}
+
+.koniec .kontakty h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 200;
+    font-size: 70px;
+    margin-bottom: 40px;
+    color: #757AA5;
+}
+
+.koniec .kontakty p {
+    font-weight: 500;
+    font-size: 22px;
+    color: #828282;
+}
+
+.koniec .kontakty:first-child p {
+    margin-bottom: 20px;
+}
+
+.koniec .kontakty p:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 733px) {
+    .menu .lewo .lista,
+    .menu .prawo .sieci_spolecznosciowe {
+        display: none;
+    }
+    .menu .prawo .bar {
+        display: block;
+    }
+}
+
+@media (max-width: 1337px) {
+    .czapka .lisc {
+        top: 550px;
+    }
+    .czapka .kwiatek {
+        top: 100px;
+    }
+}
+
+@media (max-width: 1152px) {
+    .czapka .lisc {
+        top: 600px;
+    }
+    .czapka .kwiatek {
+        top: 230px;
+    }
+    .czapka .jagody {
+        top: 850px;
+    }
+}
+
+@media (max-width: 981px) {
+    .czapka .lisc {
+        display: none;
+    }
+    .czapka .kwiatek {
+        display: none;
+    }
+    .czapka .jagody {
+        display: none;
+    }
+    .czapka .nazwa {
+        font-size: 100px;
+    }
+    /* .czapka .teksty {
+        flex-wrap: wrap;
+    } */
+    .czapka .teksty .kilka {
+        margin-top: 0;
+        gap: 40px;
+        justify-content: start;
+    }
+    .czapka {
+        margin-bottom: 200px;
+    }
+    .produkty .napis {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 880px) {
+    .czapka .teksty .drugi button {
+        margin: 0;
+    }
+}
+
+@media (max-width: 938px) {
+    .czapka .teksty .kilka p,
+    .czapka .teksty .kilka h4 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1040px) {
+    .warto .co,
+    .warto .co .dwa {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .warto .co .ost {
+        margin-top: -220px;
+        margin-right: 330px;
+    }
+    .warto h5 {
+        font-size: 50px;
+        margin-bottom: 50px;
+    }
+    .warto .co .karta:first-child {
+        margin: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .czapka .teksty {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .czapka .teksty .kilka {
+        width: 100%;
+        height: 100%;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    .czapka .nazwa {
+        font-size: 70px;
+        font-weight: 800;
+        margin-bottom: 30px;
+    }
+    .menu {
+        margin-bottom: 50px;
+    }
+    .czapka .teksty .drugi button {
+        width: 300px;
+        text-align: center;
+    }
+    .czapka {
+        margin-bottom: 10px;
+    }
+    .produkty .napis {
+        font-size: 30px;
+    }
+    .warto .co {
+        flex-direction: column;
+    }
+    .warto .co .ost {
+        margin: 0;
+    }
+    .warto h5 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 513px) {
+    .czapka .nazwa {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 838px) {
+    .produkty .karty {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .produkty .karta {
+        width: 100%;
+    }
+    .produkty .liscie {
+        display: none;
+    }
+    .akcje .galaz {
+        display: none;
+    }
+}
+
+@media (max-width: 1004px) {
+    .akcje {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 150px;
+    }
+    .akcje .o_tym {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 704px) {
+    .akcje .karta {
+        padding: 50px;
+    }
+    .akcje .karta img {
+        display: none;
+    }
+    .akcje .karta .opis h4 {
+        width: 100%;
+    }
+    .akcje .karta .opis p {
+        width: 100%;
+    }
+}
+
+@media (max-width: 586px) {
+    .akcje .karta .opis h4 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1109px) {
+    .fakty .nazwa {
+        font-size: 120px;
+        top: -80px;
+    }
+}
+
+@media (max-width: 900px) {
+    .fakty .szczegoly img {
+        position: absolute;
+        width: 500px;
+        top: 50px;
+        right: 90px;
+    }
+    .fakty .center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 783px) {
+    .fakty .szczegoly img {
+        width: 400px;
+        top: 90px;
+        right: 0px;
+    }
+    .fakty .nazwa {
+        font-size: 70px;
+        top: -50px;
+    }
+}
+
+@media (max-width: 626px) {
+    .fakty .szczegoly img {
+        display: none;
+    }
+}
+
+@media (max-width: 445px) {
+    .fakty .nazwa {
+        font-size: 50px;
+        top: -35px;
+    }
+}
+
+@media (max-width: 893px) {
+    .koniec .kontakty h3 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 469px) {
+    .koniec .kontakty h3 {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 438px) {
+    .menu .active {
+        width: 200px;
+    }
+}
